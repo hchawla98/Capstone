@@ -1,0 +1,245 @@
+USE [master]
+GO
+
+/****** Object:  Database [Capstone]    Script Date: 2020-03-24 1:14:05 PM ******/
+CREATE DATABASE [Capstone]
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Capstone].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [Capstone] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [Capstone] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [Capstone] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [Capstone] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [Capstone] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [Capstone] SET AUTO_CLOSE ON 
+GO
+
+ALTER DATABASE [Capstone] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [Capstone] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [Capstone] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [Capstone] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [Capstone] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [Capstone] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [Capstone] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [Capstone] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [Capstone] SET  ENABLE_BROKER 
+GO
+
+ALTER DATABASE [Capstone] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [Capstone] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [Capstone] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [Capstone] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [Capstone] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [Capstone] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [Capstone] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [Capstone] SET RECOVERY SIMPLE 
+GO
+
+ALTER DATABASE [Capstone] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [Capstone] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [Capstone] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [Capstone] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [Capstone] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+
+ALTER DATABASE [Capstone] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [Capstone] SET QUERY_STORE = OFF
+GO
+
+ALTER DATABASE [Capstone] SET  READ_WRITE 
+GO
+
+USE [Capstone]
+GO
+
+/****** Object:  Table [dbo].[Customer]    Script Date: 2020-03-24 1:20:14 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Customer](
+	[customerID] [int] IDENTITY(1,1) NOT NULL,
+	[lastName] [varchar](50) NOT NULL,
+	[firstName] [varchar](50) NOT NULL,
+	[address] [varchar](max) NOT NULL,
+	[postalCode] [varchar](50) NOT NULL,
+	[homePhone] [bigint] NULL,
+	[cellPhone] [bigint] NULL,
+	[email] [varchar](50) NOT NULL,
+ CONSTRAINT [customerID] PRIMARY KEY CLUSTERED 
+(
+	[customerID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Item]    Script Date: 2020-03-24 1:21:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Item](
+	[itemID] [int] IDENTITY(1,1) NOT NULL,
+	[categoryID] [int] NOT NULL,
+	[brand] [varchar](50) NOT NULL,
+	[make] [varchar](50) NOT NULL,
+	[sku] [varchar](50) NOT NULL,
+	[cost] [decimal](4, 2) NOT NULL,
+	[price] [decimal](4, 2) NOT NULL,
+ CONSTRAINT [itemID] PRIMARY KEY CLUSTERED 
+(
+	[itemID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Inventory]    Script Date: 2020-03-24 1:21:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Inventory](
+	[inventoryID] [int] IDENTITY(1,1) NOT NULL,
+	[itemID] [int] NOT NULL,
+	[size] [int] NOT NULL,
+	[color] [varchar](50) NOT NULL,
+	[stock] [int] NOT NULL,
+ CONSTRAINT [inventoryID] PRIMARY KEY CLUSTERED 
+(
+	[inventoryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Category]    Script Date: 2020-03-24 1:21:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Category](
+	[categoryID] [int] IDENTITY(1,1) NOT NULL,
+	[categoryName] [varchar](50) NOT NULL,
+ CONSTRAINT [categoryID] PRIMARY KEY CLUSTERED 
+(
+	[categoryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Orders]    Script Date: 2020-03-24 1:22:08 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Orders](
+	[orderID] [int] IDENTITY(1,1) NOT NULL,
+	[itemID] [int] NOT NULL,
+	[clientID] [int] NOT NULL,
+UNIQUE NONCLUSTERED 
+(
+	[orderID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [clientID] FOREIGN KEY([clientID])
+REFERENCES [dbo].[Customer] ([customerID])
+GO
+
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [clientID]
+GO
+
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [Orders_FK00] FOREIGN KEY([itemID])
+REFERENCES [dbo].[Item] ([itemID])
+GO
+
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [Orders_FK00]
+GO
+
+ALTER TABLE [dbo].[Item]  WITH CHECK ADD  CONSTRAINT [Items_FK00] FOREIGN KEY([categoryID])
+REFERENCES [dbo].[Category] ([categoryID])
+GO
+ALTER TABLE [dbo].[Item] CHECK CONSTRAINT [Items_FK00]
+GO
+
+ALTER TABLE [dbo].[Inventory]  WITH CHECK ADD  CONSTRAINT [Inventory_FK00] FOREIGN KEY([itemID])
+REFERENCES [dbo].[Item] ([itemID])
+GO
+ALTER TABLE [dbo].[Inventory] CHECK CONSTRAINT [Inventory_FK00]
+GO
+
+INSERT [dbo].[Category] ([categoryName]) VALUES (N'Men')
+INSERT [dbo].[Category] ([categoryName]) VALUES (N'Women')
+INSERT [dbo].[Category] ([categoryName]) VALUES (N'Kids')
+
+INSERT [dbo].[Item] ([categoryID], [brand], [make], [sku], [cost], [price]) VALUES (1, N'Adidas', N'Lite Racer', N'AD000001', 25, 60)
+INSERT [dbo].[Item] ([categoryID], [brand], [make], [sku], [cost], [price]) VALUES (2, N'Adidas', N'Alta Run', N'AD000002', 24, 55)
+INSERT [dbo].[Item] ([categoryID], [brand], [make], [sku], [cost], [price]) VALUES (3, N'Adidas', N'Duramo', N'AD000003', 20, 45)
+
+INSERT [dbo].[Inventory] ([itemID], [size], [color], [stock]) VALUES (1, 10, N'Black', 20)
+INSERT [dbo].[Inventory] ([itemID], [size], [color], [stock]) VALUES (2, 5, N'Grey', 20)
+INSERT [dbo].[Inventory] ([itemID], [size], [color], [stock]) VALUES (3, 1, N'Grey', 20)

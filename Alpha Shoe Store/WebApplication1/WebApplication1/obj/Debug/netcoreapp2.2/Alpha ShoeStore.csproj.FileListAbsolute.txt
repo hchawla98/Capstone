@@ -1,0 +1,32 @@
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.deps.json
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.runtimeconfig.json
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.runtimeconfig.dev.json
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.dll
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.pdb
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.Views.dll
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.2\Alpha ShoeStore.Views.pdb
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.csprojAssemblyReference.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.csproj.CoreCompileInputs.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.RazorAssemblyInfo.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.RazorAssemblyInfo.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.AssemblyInfoInputs.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.AssemblyInfo.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.TagHelpers.input.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.TagHelpers.output.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.RazorCoreGenerate.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.RazorTargetAssemblyInfo.cache
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.RazorTargetAssemblyInfo.cs
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.Views.pdb
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.dll
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.pdb
+F:\Sem 4\Application Project\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.2\Alpha ShoeStore.csproj.CopyComplete

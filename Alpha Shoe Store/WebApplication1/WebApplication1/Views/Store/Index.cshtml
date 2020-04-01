@@ -1,0 +1,15 @@
+﻿@model IEnumerable<AlphaShoeStore.Models.Category>
+@{
+    ViewData["Title"] = "Alpha Shoe Store";
+}
+
+<h1>Browse Categories</h1>
+<p>
+    Select from @Model.Count() Categories:
+</p>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.CategoryName, "Browse", new { category = category.CategoryName })</li>
+    }
+</ul>

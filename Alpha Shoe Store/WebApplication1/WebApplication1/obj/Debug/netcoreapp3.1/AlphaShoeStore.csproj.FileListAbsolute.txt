@@ -1,0 +1,4 @@
+C:\Git Projects\CapstoneProject\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\AlphaShoeStore.csprojAssemblyReference.cache
+C:\Git Projects\CapstoneProject\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\AlphaShoeStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Git Projects\CapstoneProject\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\AlphaShoeStore.AssemblyInfoInputs.cache
+C:\Git Projects\CapstoneProject\Alpha Shoe Store\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\AlphaShoeStore.AssemblyInfo.cs
